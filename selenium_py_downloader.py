@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 options = webdriver.SafariOptions()
 # options.add_experimental_option('prefs', {
-# "download.default_directory": "/Users/alexander/Downloads/UCI/" + "June", #Change default directory for downloads
+# "download.default_directory": "/Users/alexander/Downloads/UCI/", #Change default directory for downloads
 # "download.prompt_for_download": False, #To auto download the file
 # "download.directory_upgrade": True,
 # "plugins.always_open_pdf_externally": True #It will not show PDF directly in chrome
@@ -83,15 +83,6 @@ for i in range(10):
     find_next_button()
 
 time.sleep(5)
-
-
-
-
-# element = browser.find_elements(By.PARTIAL_LINK_TEXT, "PDF")
-# #element.click()
-# time.sleep(5)
-# #print(element)
-# print(len(element))
 
 for web in range (len(element)):
     browser.get("https://www.uscis.gov/administrative-appeals/aao-decisions/aao-non-precedent-decisions")  
