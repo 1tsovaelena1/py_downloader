@@ -6,16 +6,17 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.remote.webdriver import BaseWebDriver as Base
 from selenium.webdriver.chrome.options import Options
 
+
 import time
-options = webdriver.SafariOptions()
-# options.add_experimental_option('prefs', {
-# "download.default_directory": "/Users/alexander/Downloads/UCI/", #Change default directory for downloads
-# "download.prompt_for_download": False, #To auto download the file
-# "download.directory_upgrade": True,
-# "plugins.always_open_pdf_externally": True #It will not show PDF directly in chrome
-# })
-browser = webdriver.Safari(options=options)
-#browser = webdriver.Safari()
+
+options = webdriver.ChromeOptions()
+options.add_experimental_option('prefs', {
+"download.default_directory": True, #Change default directory for downloads
+"download.prompt_for_download": False, #To auto download the file
+"download.directory_upgrade": True,
+"plugins.always_open_pdf_externally": True #It will not show PDF directly in chrome
+})
+browser = webdriver.Chrome(options=options)
 
 browser.get("https://www.uscis.gov/administrative-appeals/aao-decisions/aao-non-precedent-decisions")
 def find_wrapper():
@@ -46,7 +47,7 @@ def find_month(month,year,file_qty):
     i=0
     for i in range(n+1):
         month_sel.send_keys(Keys.ARROW_DOWN)
-        time.sleep(0.1)
+        time.sleep(0.3)
     month_sel.send_keys(Keys.ENTER)
     time.sleep(2)
 
@@ -89,6 +90,3 @@ for web in range (len(element)):
     element = browser.find_elements(By.PARTIAL_LINK_TEXT, "PDF")
     elem = element[web].click()
     time.sleep(5)
-
-
-
