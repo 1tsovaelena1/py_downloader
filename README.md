@@ -1,4 +1,4 @@
-![py_downloader Banner]((https://raw.githubusercontent.com/1tsovaelena1/py_downloader/refs/heads/main/2.webp))
+![py_downloader Banner](https://raw.githubusercontent.com/1tsovaelena1/py_downloader/refs/heads/main/2.webp)
 
 https://raw.githubusercontent.com/1tsovaelena1/py_downloader/refs/heads/main/2.webp
 py_downloader is a simple and efficient tool for downloading files from the internet with customizable settings.
